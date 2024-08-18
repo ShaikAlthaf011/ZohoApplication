@@ -70,4 +70,31 @@ public void Bussiness() {
 		System.out.println("Test case is Failed");
 	}
 }
+public void Customers() {
+	lp=new Loginpage(driver);
+	lp.CUSTOMERS(lp.customers);
+}
+public void Analtics() {
+	lp=new Loginpage(driver);
+	lp.ZohoAnalytical(lp.Analytical);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Customer is Clickable");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
+public void Clickablemore() {
+	lp=new Loginpage(driver);
+	lp.MoreRead(lp.Readmore);
+}
+public void window() {
+	lp=new Loginpage(driver);
+	lp.WindowHandles();
+	}
+public void gettextmethod() {
+	lp=new Loginpage(driver);
+	String str=lp.YAGNA(lp.Yagna,"Zoho Analytics offers comprehensive insights into the operational and managerial aspects for Yagna iQ");
+    System.out.println(str);
+    ExtentFactory.getInstance().getExtent().log(Status.PASS,"Customer is Clickable");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
 }

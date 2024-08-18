@@ -2,6 +2,8 @@ package ReusableComponents;
 
 import java.io.File;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
@@ -50,5 +52,16 @@ public static String Text(WebElement element,String Text) {
 }
 public static void Test(WebElement element) {
 	boolean b=element.isDisplayed();
+}
+public static void WindowHandles() {
+	Set<String>S=driver.getWindowHandles();
+	Iterator<String>it=S.iterator();
+	String firstwindow=it.next();
+	String secondwindow="";
+	while(it.hasNext()) {
+		secondwindow=it.next();
+		break;
+	}
+	driver.switchTo().window(secondwindow);
 }
 }

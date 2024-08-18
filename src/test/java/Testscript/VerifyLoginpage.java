@@ -18,5 +18,10 @@ public void VerifyLoginpage() throws IOException {
 	c();
 	Story();
 	Bussiness();
+	Customers();
+	Analtics();
+	Clickablemore();
+	window();
+	gettextmethod();
 }
 }

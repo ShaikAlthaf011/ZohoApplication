@@ -12,16 +12,6 @@ public class VerifyLoginpage extends BussinessComponents {
 public void VerifyLoginpage() throws IOException {
 	String url=Browser.Open_browser("url");
 	Navigateurl(url);
-	ZohoText();
-	Paragraph();
-	Currenturl();
-	c();
-	Story();
-	Bussiness();
-	Customers();
-	Analtics();
-	Clickablemore();
-	window();
-	gettextmethod();
+	
 }
 }

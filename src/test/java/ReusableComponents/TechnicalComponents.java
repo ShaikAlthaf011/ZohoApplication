@@ -53,15 +53,5 @@ public static String Text(WebElement element,String Text) {
 public static void Test(WebElement element) {
 	boolean b=element.isDisplayed();
 }
-public static void WindowHandles() {
-	Set<String>S=driver.getWindowHandles();
-	Iterator<String>it=S.iterator();
-	String firstwindow=it.next();
-	String secondwindow="";
-	while(it.hasNext()) {
-		secondwindow=it.next();
-		break;
-	}
-	driver.switchTo().window(secondwindow);
-}
+
 }

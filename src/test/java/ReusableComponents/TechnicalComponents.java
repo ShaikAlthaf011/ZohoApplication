@@ -2,13 +2,12 @@ package ReusableComponents;
 
 import java.io.File;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.google.common.io.Files;
 
@@ -53,5 +52,9 @@ public static String Text(WebElement element,String Text) {
 public static void Test(WebElement element) {
 	boolean b=element.isDisplayed();
 }
-
+public static void MouseHover(WebElement element) {
+	Actions ac=new Actions(driver);
+	ac.moveToElement(element).build().perform();
+	
+}
 }

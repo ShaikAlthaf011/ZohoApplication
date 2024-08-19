@@ -12,6 +12,10 @@ public class VerifyLoginpage extends BussinessComponents {
 public void VerifyLoginpage() throws IOException {
 	String url=Browser.Open_browser("url");
 	Navigateurl(url);
-	
+	Testcase1();
+	Testcase2();
+	Testcase3();
+	Testcase4();
+	Testcase5();
 }
 }

@@ -73,6 +73,13 @@ if(str.equals("Close more deals in less time. Track what stage your deals are cu
 	System.out.println("Test case is Failed");
 }
 }
+public void Testcase7() {
+	lp=new Loginpage(driver);
+	lp.Funcation(lp.learnmore);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Features Mouse Hover Actions");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
 
 }
 

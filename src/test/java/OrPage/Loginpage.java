@@ -26,6 +26,12 @@ public class Loginpage extends TechnicalComponents {
 	@FindBy(xpath="//*[@id='salesforce-automation']/div/div[2]/p")
 	public WebElement DealManagement;
 	
+	@FindBy(xpath="//div[@id='salesforce-automation']/div/div[3]/a")
+	public WebElement learnmore;
+	
+	@FindBy(xpath="//ul[@class='summary_Lst']/li")
+	public WebElement CustomerRelationship;
+	
 	public Loginpage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
@@ -46,6 +52,9 @@ public class Loginpage extends TechnicalComponents {
    public static String textmethod(WebElement element,String Text) {
 	   String str1=TechnicalComponents.Text(element, Text);
 	   return str1;
-	   
+	}
+   public void Funcation(WebElement element) {
+	   TechnicalComponents.Clickable(element);
    }
+   
 }

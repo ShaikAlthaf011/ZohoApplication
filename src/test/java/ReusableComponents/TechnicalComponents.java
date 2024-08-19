@@ -45,7 +45,7 @@ public static void Clickable(WebElement element) {
 public static void sendkeys(WebElement element,String Text) {
 	element.sendKeys(Text);
 }
-public static String Text(WebElement element,String Text) {
+public static String  Text(WebElement element,String Text) {
 	element.getText();
 	return Text;
 }

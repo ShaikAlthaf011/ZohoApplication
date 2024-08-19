@@ -17,5 +17,7 @@ public void VerifyLoginpage() throws IOException {
 	Testcase3();
 	Testcase4();
 	Testcase5();
+	Testcase6();
+	 
 }
 }

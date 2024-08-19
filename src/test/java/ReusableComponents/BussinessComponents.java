@@ -1,6 +1,6 @@
 package ReusableComponents;
 
-import org.testng.Assert;
+import org.openqa.selenium.remote.Browser;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
@@ -63,4 +63,17 @@ public void Testcase5() {
 	lp.FeatureAll(lp.AllFeature);
 	
 }
+public void Testcase6() {
+	lp=new Loginpage(driver);
+String str=lp.textmethod(lp.DealManagement,"Close more deals in less time. Track what stage your deals are currently in, and seize every opportunity at the optimal moment.");
+System.out.println(str);
+if(str.equals("Close more deals in less time. Track what stage your deals are currently in, and seize every opportunity at the optimal moment.")) {
+	System.out.println("Test case is Passed");
+}else {
+	System.out.println("Test case is Failed");
 }
+}
+
+}
+
+

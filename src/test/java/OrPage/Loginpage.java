@@ -32,6 +32,10 @@ public class Loginpage extends TechnicalComponents {
 	@FindBy(xpath="//ul[@class='summary_Lst']/li")
 	public WebElement CustomerRelationship;
 	
+	@FindBy(xpath="//a[contains(text(),'Bigin')]")
+	public WebElement Bigin;
+	
+	
 	public Loginpage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
@@ -56,5 +60,7 @@ public class Loginpage extends TechnicalComponents {
    public void Funcation(WebElement element) {
 	   TechnicalComponents.Clickable(element);
    }
-   
+   public void bigin(WebElement element) {
+	   TechnicalComponents.Clickable(element);
+   }
 }

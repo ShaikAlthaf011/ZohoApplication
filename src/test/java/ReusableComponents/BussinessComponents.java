@@ -80,7 +80,13 @@ public void Testcase7() {
 	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
 			.build());
 }
-
+public void Testcase8() {
+	lp=new Loginpage(driver);
+	lp.bigin(lp.Bigin);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click in the Bigin");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
 }
 
 

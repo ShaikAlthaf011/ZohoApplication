@@ -1,12 +1,18 @@
 package ReusableComponents;
 
-import org.openqa.selenium.remote.Browser;
+import java.time.Duration;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 import BrowserConfiguration.ExtentFactory;
 import OrPage.Loginpage;
+import dev.failsafe.internal.util.Durations;
 
 
 public class BussinessComponents extends TechnicalComponents {
@@ -87,6 +93,19 @@ public void Testcase8() {
 	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
 			.build());
 }
+public void Testcase9() {
+	lp=new Loginpage(driver);
+	String str1=lp.Customersupport(lp.CustomerOperation,"Sales deals, support tickets, customer onboarding, order delivery, customer testimonials, contracts, and everything in between—Bigin is all you need to streamline your customer operations in one platform. Get started in under 30 minutes.");
+	Assert.assertEquals(str1,"Sales deals, support tickets, customer onboarding, order delivery, customer testimonials, contracts, and everything in between—Bigin is all you need to streamline your customer operations in one platform. Get started in under 30 minutes.");
+}
+public void Testcase10() {
+	lp=new Loginpage(driver);
+	lp.customer(lp.Customers);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click in the Customers");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
+
 }
 
 

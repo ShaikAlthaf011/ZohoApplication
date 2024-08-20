@@ -35,6 +35,13 @@ public class Loginpage extends TechnicalComponents {
 	@FindBy(xpath="//a[contains(text(),'Bigin')]")
 	public WebElement Bigin;
 	
+	@FindBy(xpath="//div[@class='bgn-hdr-content']/p")
+	public WebElement CustomerOperation;
+	
+	@FindBy(xpath="/html/body/header/div[3]/div/div[2]/div/ul/li[5]/a")
+	public WebElement Customers;
+	
+	
 	
 	public Loginpage(WebDriver driver) {
 		this.driver=driver;
@@ -63,4 +70,12 @@ public class Loginpage extends TechnicalComponents {
    public void bigin(WebElement element) {
 	   TechnicalComponents.Clickable(element);
    }
+   public static String Customersupport(WebElement element,String Text) {
+	   String str=TechnicalComponents.Text(element, Text);
+	   return str;
+   }
+   public void customer(WebElement element) {
+	   TechnicalComponents.Clickable(element);
+   }
+  
 }

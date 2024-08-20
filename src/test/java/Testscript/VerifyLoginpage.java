@@ -9,7 +9,7 @@ import ReusableComponents.BussinessComponents;
 
 public class VerifyLoginpage extends BussinessComponents {
 @Test
-public void VerifyLoginpage() throws IOException {
+public void VerifyLoginpage() throws IOException, InterruptedException {
 	String url=Browser.Open_browser("url");
 	Navigateurl(url);
 	Testcase1();
@@ -20,5 +20,8 @@ public void VerifyLoginpage() throws IOException {
 	Testcase6();
 	Testcase7();
 	Testcase8();
+	Testcase9();
+	Testcase10();
+	
 }
 }

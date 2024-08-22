@@ -7,10 +7,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
@@ -63,5 +63,13 @@ public static void MouseHover(WebElement element) {
 public static void Applicationwait(WebElement element) {
 	WebDriverWait wait=new WebDriverWait(driver,Duration.ofMillis(100));
 	wait.until(ExpectedConditions.elementToBeClickable(element));
+}
+public static boolean isselected(WebElement element) {
+	boolean b=element.isSelected();
+	return b;
+}
+public static void valueSelected(WebElement element,String Text) {
+	Select sc=new Select(element);
+	sc.selectByVisibleText(Text);
 }
 }

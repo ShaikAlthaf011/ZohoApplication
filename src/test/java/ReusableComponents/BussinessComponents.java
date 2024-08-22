@@ -12,11 +12,14 @@ import com.aventstack.extentreports.Status;
 
 import BrowserConfiguration.ExtentFactory;
 import OrPage.Loginpage;
+import OrPage.Registerpage;
 import dev.failsafe.internal.util.Durations;
 
 
 public class BussinessComponents extends TechnicalComponents {
 public static Loginpage lp;
+public static Registerpage rg;
+
 public static void Navigateurl(String url) {
 	TechnicalComponents.Verifying(url);
 	lp=new Loginpage(driver);
@@ -105,7 +108,68 @@ public void Testcase10() {
 	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
 			.build());
 }
-
+public void Register() {
+	rg=new Registerpage(driver);
+}
+public void RegisterTest1() {
+	rg=new Registerpage(driver);
+	rg.Test1(rg.Company);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click on the Company");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
+public void RegisterTest2() {
+	rg=new Registerpage(driver);
+	rg.Test2(rg.LongGame);
+}
+public void RegisterTest3() {
+	rg=new Registerpage(driver);
+	String str=rg.stringText(rg.Strong,"Perspectives on building businesses, from the road less traveled");
+	System.out.println(str);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click on the Company");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+	
+}
+public void RegisterTest4() {
+	rg=new Registerpage(driver);
+	String str=rg.Test3(rg.analyst,"Cross-learnings #1: from international athlete to analyst relations");
+	Assert.assertEquals(str,"Cross-learnings #1: from international athlete to analyst relations");
+}
+public void RegisterTest5() {
+	rg=new Registerpage(driver);
+	rg.growth(rg.Growth);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click on the Company");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
+public void RegisterTest6() {
+	rg=new Registerpage(driver);
+	rg.EmailAdress(rg.Email,"altushaik@gmail.com");
+}
+public void RegisterTest7() {
+	rg=new Registerpage(driver);
+	rg.Selected(rg.Selected,"Ghana");
+}
+public void RegisterTest8() {
+	rg=new Registerpage(driver);
+	rg.submit(rg.Submit);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click on the submit");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
+public void Sales() {
+	rg=new Registerpage(driver);
+	rg.Marketing(rg.SalesMarketing);
+	
+}
+public void Entervalue() {
+	rg=new Registerpage(driver);
+	rg.Testsignificans(rg.Textsalesmarketing);
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,"Click on the submit");
+	ExtentFactory.getInstance().getExtent().log(Status.PASS,MediaEntityBuilder.createScreenCaptureFromPath(TechnicalComponents.takescreenshot())
+			.build());
+}
 }
 
 
